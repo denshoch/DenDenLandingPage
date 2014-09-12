@@ -2,6 +2,128 @@
 layout: default
 ---
 
+<div id="fb-root"></div>
+      <script>(function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/ja_JP/all.js#xfbml=1";
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));</script>
+
+<div class="jumbotron">
+  <div class="container">
+    <h1 class="h2">{{ site.title }}</h1>
+    <p><a class="btn btn-primary btn-lg" role="button">Learn more</a></p>
+  </div>
+</div>
+
+     <div id="social" class="section social">
+        <div class="container">
+          <ul class="list-inline text-center social-bottuns">
+            <li id="tweet-btn">
+              <a href="https://twitter.com/share" data-url="{BlogURL}" class="twitter-share-button">Tweet</a>
+              <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+            </li>
+            <li id="fb-like-btn">
+              <div class="fb-like" data-url="{BlogURL}" data-send="true" data-layout="button_count" data-width="450" data-show-faces="false"></div>
+            </li>
+            <li id="hb-btn">
+              <a href="http://b.hatena.ne.jp/entry/" class="hatena-bookmark-button" data-hatena-bookmark-layout="standard-balloon" title="このエントリーをはてなブックマークに追加"><img src="http://b.st-hatena.com/images/entry-button/button-only.gif" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a><script type="text/javascript" src="http://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script>
+            </li>
+            <li id="g-plusone-btn">
+              <div class="g-plusone" data-size="medium"></div>
+              <script type="text/javascript">
+                window.___gcfg = {lang: 'ja'};
+
+                (function() {
+                  var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+                  po.src = 'https://apis.google.com/js/plusone.js';
+                  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+                })();
+              </script>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+<section id="introduction">
+  <div class="container">
+    <header class="page-header text-center">
+      <h2>ランディングページって何？</h2>
+      <p class="text-muted">Lorem ipsum</p>
+    </header>
+
+</section>
+
+<section id="marketing">
+  <div class="container">
+    <header class="page-header text-center">
+      <h2>Title</h2>
+      <p class="text-muted">Lorem ipsum</p>
+    </header>
+
+    <div class="row">
+      <div class="col-md-4">
+        <div class="media">
+          <div class="pull-left text-center">
+            <div class="marketing-icon"><i class="fa fa-mobile"></i></div>
+          </div>
+        
+          <div class="media-body">
+            <h4 class="media-heading">レスポンシブデザイン</h4>
+            <p>スマートフォンでも読みやすい、デバイスごとに最適化されたレイアウトで、どんな環境でも負担を感じることなくページを閲覧できます。</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="media">
+          <div class="pull-left text-center">
+            <div class="marketing-icon"><i class="fa fa-share-alt"></i></div>
+          </div>
+          <div class="media-body">
+            <h4 class="media-heading">ソーシャルメディア対応</h4>
+            <p>FacebookやGoogle+で使われるOGPと、Twitterで使われるTwitter Cardに対応。ページがシェアされた時の表示を魅力的なものにします。</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="media">
+          <div class="pull-left text-center">
+            <div class="marketing-icon"><i class="fa fa-search"></i></div>
+          </div>
+          <div class="media-body">
+            <h4 class="media-heading">検索エンジン最適化</h4>
+            <p>Google, Microsoft, Yahoo!など大手検索エンジンが採用する構造化データの仕様 <a href="http://schema.org/">schema.org</a>に対応。あなたの本の情報を検索エンジンに正確に伝えます。</p>
+          </div>
+        </div>
+      </div>
+  </div>
+</section>
+
+<section id="features">
+  <div class="container">
+    <header class="page-header text-center">
+      <h2>Title</h2>
+      <p class="text-muted">Lorem ipsum</p>
+    </header>
+
+    <div class="row">
+      <div class="col-md-6">
+        <h3 class="media-heading"><span class="text-primary">1.</span> 豊富なカラーバリエーション</h3>
+        <p></p>
+      </div>
+      <div class="col-md-6">
+        <h3 class="media-heading"><span class="text-primary">2.</span> 試し読みの組み込みに対応</h3>
+      </div>
+      <div class="col-md-6">
+        <h3 class="media-heading"><span class="text-primary">3.</span> HTML/CSSの知識不要</h3>
+      </div>
+  </div>
+</section>
+
+
+<!--
 <div class="home">
 
   <h1 class="page-heading">Posts</h1>
@@ -21,3 +143,4 @@ layout: default
   <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
 
 </div>
+-->
