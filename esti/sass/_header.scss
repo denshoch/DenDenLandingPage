@@ -1,0 +1,150 @@
+$header-height-lg: 500px;
+$header-height-xs: 300px;
+$header-shadow-opacity: 0.5;
+$cover-image-height: 500px;
+
+#header {
+  color: #FFF;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-box-shadow: 0 0 30px 2px rgba(0,0,0,0.125) inset;
+  -moz-box-shadow: 0 0 30px 2px rgba(0,0,0,0.125) inset;
+  box-shadow: 0 0 30px 2px rgba(0,0,0,0.125) inset;
+  &:before {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: $header-height-lg;
+    margin: 0;
+    padding: 0;
+    background-color: $brand-primary;
+  }
+  #header-inner {
+    min-height: $header-height-lg;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0.00, rgba(0,0,0,0.1)), color-stop(1.00, rgba(0,0,0,$header-shadow-opacity)));
+    background: -webkit-linear-gradient(rgba(0,0,0,0), rgba(0,0,0,$header-shadow-opacity));
+    background: -moz-linear-gradient(rgba(0,0,0,0), rgba(0,0,0,$header-shadow-opacity));
+    background: -o-linear-gradient(rgba(0,0,0,0), rgba(0,0,0,$header-shadow-opacity));
+    background: -ms-linear-gradient(rgba(0,0,0,0), rgba(0,0,0,$header-shadow-opacity));
+    background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,$header-shadow-opacity));
+  }
+  #catchprase-container {
+    position: relative;
+    height: $header-height-lg;
+  }
+  #catchprase-container-inner {
+    position: absolute;
+    bottom: 0;
+    padding-bottom: 40px;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.4), -2px -2px 10px rgba(0,0,0,0.4), 2px -2px 10px rgba(0,0,0,0.4), -2px 2px 10px rgba(0,0,0,0.4);
+    .catchprase {
+      font-size: 48px;
+      line-height: 1.1;
+      font-weight: bold;
+    }
+    .subphrase {
+      font-size: 16px;
+      line-height: 20px;
+    }
+    .book-title {
+      font-size: 20px;
+      font-weight: bold;
+      line-height: 1.1;
+      margin: 0;
+    }
+    .btn-container {
+      margin-top: 20px;
+    }
+    .btn-default {
+      color: #FFF;
+      border-color: #FFF;
+      background: rgba(0,0,0,0.6);
+      &:hover,
+      &:active {
+        background: rgba(0,0,0,0.3);
+      }
+    }
+  }
+}
+
+#header-bottom {
+  border-top:    1px solid darken($gray-lighter,15%);
+  border-bottom: 1px solid darken($gray-lighter,15%);
+  background: $gray-lighter;
+}
+
+#cover-image {
+  margin-top: -$header-height-lg + 40px;
+  max-width: 100%;
+  max-height: $header-height-lg;
+  z-index: 2;
+  -webkit-box-shadow: 0 3px 5px rgba(0,0,0,0.25);
+  box-shadow: 0 3px 5px rgba(0,0,0,0.25);
+}
+
+#social {
+  padding: $section-padding-vert 0;
+  .social-bottuns {
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: $screen-xs-max){
+  #header {
+    &:before {
+      height: $header-height-xs;
+    }
+    #header-inner {
+      min-height: $header-height-xs;
+      text-align: center;
+    }
+    #catchprase-container {
+      position: relative;
+      height: auto;
+    }
+    #catchprase-container-inner {
+      position: relative;
+      vertical-align: middle;
+      margin: auto;
+      padding: 20px 0;
+      text-align: center;
+      .catchprase {
+        margin-top: 20px;
+        font-size: 24px;
+        line-height: 1.1;
+      }
+      .subphrase {
+        font-size: 14px;
+        line-height: 20px;
+      }
+    }
+  }
+  #header-bottom {
+    border: none;
+    background: $body-bg;
+  }
+  #cover-image-container {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  #cover-image {
+    position: relative;
+    max-width: 300px;
+    margin-top: -80px;
+    margin-bottom: 20px;
+    height: auto;
+  }
+  #social {
+    margin: 0 -20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-top:    1px solid darken($gray-lighter,15%);
+    border-bottom: 1px solid darken($gray-lighter,15%);
+    background: $gray-lighter;
+  }
+}
