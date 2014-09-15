@@ -1,11 +1,23 @@
 @import "bootstrap";
 
-$section-padding-vert: 20px;
+$section-padding-vert: $line-height-computed;
+
+// override
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  font-weight: bold;
+}
+
+.btn {
+  border-width: 2px;
+}
 
 .label {
   padding-bottom: .2em;
 }
 
+// helper
 
 .inline-block {
   display: inline-block;

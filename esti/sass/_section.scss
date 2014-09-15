@@ -1,0 +1,47 @@
+section, .section, .section-inverse {
+  padding-top: $section-padding-vert;
+  padding-bottom: $section-padding-vert;
+}
+
+.section-title {
+  @extend .h4;
+  margin-bottom: $line-height-computed;
+  font-weight: bold;
+  color: darken($gray-lighter, 15%);
+}
+
+
+.section-lead {
+  margin-bottom: 30px;
+  font-size: 48px;
+  font-weight: bold;
+  line-height: $headings-line-height;
+  letter-spacing: -1px;
+}
+
+.section-inverse {
+  background: $brand-primary;
+  color: #FFF;
+  -webkit-box-shadow: 0 0 30px 2px rgba(0,0,0,0.125) inset;
+  -moz-box-shadow: 0 0 30px 2px rgba(0,0,0,0.125) inset;
+  box-shadow: 0 0 30px 2px rgba(0,0,0,0.125) inset;
+  a {
+    color: inherit;
+  }
+  .section-title {
+    color: inherit;
+    color: $gray-dark;
+  }
+  .section-lead {
+    color: inherit;
+  }
+  .btn-default {
+    @include button-variant(#fff, $brand-primary, #fff);
+  }
+}
+
+@media (max-width: $screen-xs-max){
+  .section-lead {
+    font-size: 36px;
+  }
+}

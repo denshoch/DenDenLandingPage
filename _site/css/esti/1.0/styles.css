@@ -1514,7 +1514,7 @@ hr {
 
 /* line 10, ../../../../.rbenv/versions/2.1.1/lib/ruby/gems/2.1.0/gems/bootstrap-sass-3.1.1.1/vendor/assets/stylesheets/bootstrap/_type.scss */
 h1, h2, h3, h4, h5, h6,
-.h1, .h2, .h3, .h4, .h5, .h6 {
+.h1, .h2, .h3, .h4, .section-title, .h5, .h6 {
   font-family: inherit;
   font-weight: 500;
   line-height: 1.1;
@@ -1531,8 +1531,9 @@ h6 .small,
 .h1 small,
 .h1 .small, .h2 small,
 .h2 .small, .h3 small,
-.h3 .small, .h4 small,
-.h4 .small, .h5 small,
+.h3 .small, .h4 small, .section-title small,
+.h4 .small,
+.section-title .small, .h5 small,
 .h5 .small, .h6 small,
 .h6 .small {
   font-weight: normal;
@@ -1561,7 +1562,7 @@ h3 .small, .h3 small,
 }
 
 /* line 37, ../../../../.rbenv/versions/2.1.1/lib/ruby/gems/2.1.0/gems/bootstrap-sass-3.1.1.1/vendor/assets/stylesheets/bootstrap/_type.scss */
-h4, .h4,
+h4, .h4, .section-title,
 h5, .h5,
 h6, .h6 {
   margin-top: 10px;
@@ -1569,8 +1570,9 @@ h6, .h6 {
 }
 /* line 42, ../../../../.rbenv/versions/2.1.1/lib/ruby/gems/2.1.0/gems/bootstrap-sass-3.1.1.1/vendor/assets/stylesheets/bootstrap/_type.scss */
 h4 small,
-h4 .small, .h4 small,
+h4 .small, .h4 small, .section-title small,
 .h4 .small,
+.section-title .small,
 h5 small,
 h5 .small, .h5 small,
 .h5 .small,
@@ -1596,7 +1598,7 @@ h3, .h3 {
 }
 
 /* line 50, ../../../../.rbenv/versions/2.1.1/lib/ruby/gems/2.1.0/gems/bootstrap-sass-3.1.1.1/vendor/assets/stylesheets/bootstrap/_type.scss */
-h4, .h4 {
+h4, .h4, .section-title {
   font-size: 18px;
 }
 
@@ -7891,17 +7893,28 @@ button.close {
     display: none !important;
   }
 }
-/* line 5, ../../../esti/sass/_bootstrap_custom.scss */
+/* line 8, ../../../esti/sass/_bootstrap_custom.scss */
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .section-title, .h5, .h6 {
+  font-weight: bold;
+}
+
+/* line 12, ../../../esti/sass/_bootstrap_custom.scss */
+.btn {
+  border-width: 2px;
+}
+
+/* line 16, ../../../esti/sass/_bootstrap_custom.scss */
 .label {
   padding-bottom: .2em;
 }
 
-/* line 10, ../../../esti/sass/_bootstrap_custom.scss */
+/* line 22, ../../../esti/sass/_bootstrap_custom.scss */
 .inline-block {
   display: inline-block;
 }
 
-/* line 15, ../../../esti/sass/_bootstrap_custom.scss */
+/* line 27, ../../../esti/sass/_bootstrap_custom.scss */
 #fb-like-btn {
   position: relative;
   top: -5px;
@@ -8077,4 +8090,93 @@ button.close {
     border-bottom: 1px solid #c8c8c8;
     background: #eeeeee;
   }
+}
+/* line 1, ../../../esti/sass/_section.scss */
+section, .section, .section-inverse {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+/* line 6, ../../../esti/sass/_section.scss */
+.section-title {
+  margin-bottom: 20px;
+  font-weight: bold;
+  color: #c8c8c8;
+}
+
+/* line 14, ../../../esti/sass/_section.scss */
+.section-lead {
+  margin-bottom: 30px;
+  font-size: 48px;
+  font-weight: bold;
+  line-height: 1.1;
+  letter-spacing: -1px;
+}
+
+/* line 22, ../../../esti/sass/_section.scss */
+.section-inverse {
+  background: #428bca;
+  color: #FFF;
+  -webkit-box-shadow: 0 0 30px 2px rgba(0, 0, 0, 0.125) inset;
+  -moz-box-shadow: 0 0 30px 2px rgba(0, 0, 0, 0.125) inset;
+  box-shadow: 0 0 30px 2px rgba(0, 0, 0, 0.125) inset;
+}
+/* line 28, ../../../esti/sass/_section.scss */
+.section-inverse a {
+  color: inherit;
+}
+/* line 31, ../../../esti/sass/_section.scss */
+.section-inverse .section-title {
+  color: inherit;
+  color: #333333;
+}
+/* line 35, ../../../esti/sass/_section.scss */
+.section-inverse .section-lead {
+  color: inherit;
+}
+/* line 38, ../../../esti/sass/_section.scss */
+.section-inverse .btn-default {
+  color: white;
+  background-color: #428bca;
+  border-color: white;
+}
+/* line 15, ../../../../.rbenv/versions/2.1.1/lib/ruby/gems/2.1.0/gems/bootstrap-sass-3.1.1.1/vendor/assets/stylesheets/bootstrap/mixins/_buttons.scss */
+.section-inverse .btn-default:hover, .section-inverse .btn-default:focus, .section-inverse .btn-default:active, .section-inverse .btn-default.active, .open > .section-inverse .btn-default.dropdown-toggle {
+  color: white;
+  background-color: #3071a9;
+  border-color: #e0e0e0;
+}
+/* line 22, ../../../../.rbenv/versions/2.1.1/lib/ruby/gems/2.1.0/gems/bootstrap-sass-3.1.1.1/vendor/assets/stylesheets/bootstrap/mixins/_buttons.scss */
+.section-inverse .btn-default:active, .section-inverse .btn-default.active, .open > .section-inverse .btn-default.dropdown-toggle {
+  background-image: none;
+}
+/* line 32, ../../../../.rbenv/versions/2.1.1/lib/ruby/gems/2.1.0/gems/bootstrap-sass-3.1.1.1/vendor/assets/stylesheets/bootstrap/mixins/_buttons.scss */
+.section-inverse .btn-default.disabled, .section-inverse .btn-default.disabled:hover, .section-inverse .btn-default.disabled:focus, .section-inverse .btn-default.disabled:active, .section-inverse .btn-default.disabled.active, .section-inverse .btn-default[disabled], .section-inverse .btn-default[disabled]:hover, .section-inverse .btn-default[disabled]:focus, .section-inverse .btn-default[disabled]:active, .section-inverse .btn-default[disabled].active, fieldset[disabled] .section-inverse .btn-default, fieldset[disabled] .section-inverse .btn-default:hover, fieldset[disabled] .section-inverse .btn-default:focus, fieldset[disabled] .section-inverse .btn-default:active, fieldset[disabled] .section-inverse .btn-default.active {
+  background-color: #428bca;
+  border-color: white;
+}
+/* line 38, ../../../../.rbenv/versions/2.1.1/lib/ruby/gems/2.1.0/gems/bootstrap-sass-3.1.1.1/vendor/assets/stylesheets/bootstrap/mixins/_buttons.scss */
+.section-inverse .btn-default .badge {
+  color: #428bca;
+  background-color: white;
+}
+
+@media (max-width: 767px) {
+  /* line 44, ../../../esti/sass/_section.scss */
+  .section-lead {
+    font-size: 36px;
+  }
+}
+/* line 1, ../../../esti/sass/_section_characters.scss */
+.character-container {
+  margin-bottom: 20px;
+}
+
+/* line 5, ../../../esti/sass/_section_characters.scss */
+.character-desc {
+  max-width: 20em;
+  margin: auto;
+  border-top: 1px solid #428bca;
+  padding: 9px 1em 0;
+  text-align: justify;
 }
