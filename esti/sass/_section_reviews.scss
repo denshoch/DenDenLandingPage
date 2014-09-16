@@ -1,0 +1,26 @@
+.review-container {
+  margin: $line-height-computed;
+  max-width: 36em;
+  .review-title {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: $brand-primary;
+  }
+}
+
+.reviewer-img-placeholder {
+  &:before {
+    width: 64px;
+    height: 64px;
+    content: "\f007";
+    font-family: FontAwesome;
+    text-align: center;
+    color: inherit;
+    font-size: 48px;
+    vertical-align: middle;
+  }
+}
+
+.reviewer-desc {
+  font-size: 13px;
+}
