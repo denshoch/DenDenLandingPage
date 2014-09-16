@@ -17,6 +17,7 @@ section, .section, .section-inverse {
   font-weight: bold;
   line-height: $headings-line-height;
   letter-spacing: -1px;
+  color: $brand-primary;
 }
 
 .section-inverse {

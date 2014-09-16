@@ -349,7 +349,7 @@ th {
   }
 
   /* line 87, ../../../../.rbenv/versions/2.1.1/lib/ruby/gems/2.1.0/gems/bootstrap-sass-3.1.1.1/vendor/assets/stylesheets/bootstrap/_print.scss */
-  .label {
+  .label, .role {
     border: 1px solid #000;
   }
 
@@ -5778,7 +5778,7 @@ tbody.collapse.in {
 }
 
 /* line 5, ../../../../.rbenv/versions/2.1.1/lib/ruby/gems/2.1.0/gems/bootstrap-sass-3.1.1.1/vendor/assets/stylesheets/bootstrap/_labels.scss */
-.label {
+.label, .role {
   display: inline;
   padding: .2em .6em .3em;
   font-size: 75%;
@@ -5791,17 +5791,17 @@ tbody.collapse.in {
   border-radius: .25em;
 }
 /* line 20, ../../../../.rbenv/versions/2.1.1/lib/ruby/gems/2.1.0/gems/bootstrap-sass-3.1.1.1/vendor/assets/stylesheets/bootstrap/_labels.scss */
-.label:empty {
+.label:empty, .role:empty {
   display: none;
 }
 /* line 25, ../../../../.rbenv/versions/2.1.1/lib/ruby/gems/2.1.0/gems/bootstrap-sass-3.1.1.1/vendor/assets/stylesheets/bootstrap/_labels.scss */
-.btn .label {
+.btn .label, .btn .role {
   position: relative;
   top: -1px;
 }
 
 /* line 34, ../../../../.rbenv/versions/2.1.1/lib/ruby/gems/2.1.0/gems/bootstrap-sass-3.1.1.1/vendor/assets/stylesheets/bootstrap/_labels.scss */
-a.label:hover, a.label:focus {
+a.label:hover, a.role:hover, a.label:focus, a.role:focus {
   color: white;
   text-decoration: none;
   cursor: pointer;
@@ -7905,19 +7905,84 @@ h1, h2, h3, h4, h5, h6,
 }
 
 /* line 16, ../../../esti/sass/_bootstrap_custom.scss */
-.label {
+.btn-container {
+  margin-top: 20px;
+}
+
+/* line 20, ../../../esti/sass/_bootstrap_custom.scss */
+.label, .role {
   padding-bottom: .2em;
 }
 
-/* line 22, ../../../esti/sass/_bootstrap_custom.scss */
+/* line 26, ../../../esti/sass/_bootstrap_custom.scss */
 .inline-block {
   display: inline-block;
 }
 
-/* line 27, ../../../esti/sass/_bootstrap_custom.scss */
+/* line 30, ../../../esti/sass/_bootstrap_custom.scss */
+.dd-container {
+  max-width: 760px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+/* line 37, ../../../esti/sass/_bootstrap_custom.scss */
 #fb-like-btn {
   position: relative;
   top: -5px;
+}
+
+/* line 42, ../../../esti/sass/_bootstrap_custom.scss */
+hr.context-break {
+  color: #428bca;
+  max-width: 540px;
+  margin-left: auto;
+  margin-right: auto;
+  height: 1px;
+  background: #bbb;
+  background-image: -webkit-linear-gradient(left, white, #428bca, white);
+  background-image: -moz-linear-gradient(left, white, #428bca, white);
+  background-image: -ms-linear-gradient(left, white, #428bca, white);
+  background-image: -o-linear-gradient(left, white, #428bca, white);
+  text-align: center;
+}
+/* line 54, ../../../esti/sass/_bootstrap_custom.scss */
+hr.context-break:after {
+  content: '\000a7';
+  display: inline-block;
+  position: relative;
+  top: -14px;
+  padding: 0 10px;
+  background: white;
+  font-size: 18px;
+  font-family: serif;
+}
+
+/* line 66, ../../../esti/sass/_bootstrap_custom.scss */
+.bubble {
+  position: relative;
+  margin: auto;
+  margin-bottom: 35px;
+  text-align: center;
+  max-width: 36em;
+  padding: 1em 3em;
+  background: #428bca;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+  color: #FFF;
+}
+
+/* line 80, ../../../esti/sass/_bootstrap_custom.scss */
+.bubble:after {
+  content: '';
+  position: absolute;
+  border-top: 15px solid #ccc;
+  border-right: 10px solid transparent;
+  border-left: 10px solid transparent;
+  bottom: -14px;
+  left: 15px;
+  border-color: #428bca transparent;
 }
 
 /* line 6, ../../../esti/sass/_header.scss */
@@ -7985,28 +8050,24 @@ h1, h2, h3, h4, h5, h6,
   margin: 0;
 }
 /* line 60, ../../../esti/sass/_header.scss */
-#header #catchprase-container-inner .btn-container {
-  margin-top: 20px;
-}
-/* line 63, ../../../esti/sass/_header.scss */
 #header #catchprase-container-inner .btn-default {
   color: #FFF;
   border-color: #FFF;
   background: rgba(0, 0, 0, 0.6);
 }
-/* line 68, ../../../esti/sass/_header.scss */
+/* line 65, ../../../esti/sass/_header.scss */
 #header #catchprase-container-inner .btn-default:hover, #header #catchprase-container-inner .btn-default:active {
   background: rgba(0, 0, 0, 0.3);
 }
 
-/* line 75, ../../../esti/sass/_header.scss */
+/* line 72, ../../../esti/sass/_header.scss */
 #header-bottom {
   border-top: 1px solid #c8c8c8;
   border-bottom: 1px solid #c8c8c8;
   background: #eeeeee;
 }
 
-/* line 81, ../../../esti/sass/_header.scss */
+/* line 78, ../../../esti/sass/_header.scss */
 #cover-image {
   margin-top: -460px;
   max-width: 100%;
@@ -8016,31 +8077,31 @@ h1, h2, h3, h4, h5, h6,
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.25);
 }
 
-/* line 90, ../../../esti/sass/_header.scss */
+/* line 87, ../../../esti/sass/_header.scss */
 #social {
   padding: 20px 0;
 }
-/* line 92, ../../../esti/sass/_header.scss */
+/* line 89, ../../../esti/sass/_header.scss */
 #social .social-bottuns {
   margin-bottom: 0;
 }
 
 @media (max-width: 767px) {
-  /* line 99, ../../../esti/sass/_header.scss */
+  /* line 96, ../../../esti/sass/_header.scss */
   #header:before {
     height: 300px;
   }
-  /* line 102, ../../../esti/sass/_header.scss */
+  /* line 99, ../../../esti/sass/_header.scss */
   #header #header-inner {
     min-height: 300px;
     text-align: center;
   }
-  /* line 106, ../../../esti/sass/_header.scss */
+  /* line 103, ../../../esti/sass/_header.scss */
   #header #catchprase-container {
     position: relative;
     height: auto;
   }
-  /* line 110, ../../../esti/sass/_header.scss */
+  /* line 107, ../../../esti/sass/_header.scss */
   #header #catchprase-container-inner {
     position: relative;
     vertical-align: middle;
@@ -8048,31 +8109,31 @@ h1, h2, h3, h4, h5, h6,
     padding: 20px 0;
     text-align: center;
   }
-  /* line 116, ../../../esti/sass/_header.scss */
+  /* line 113, ../../../esti/sass/_header.scss */
   #header #catchprase-container-inner .catchprase {
     margin-top: 20px;
     font-size: 24px;
     line-height: 1.1;
   }
-  /* line 121, ../../../esti/sass/_header.scss */
+  /* line 118, ../../../esti/sass/_header.scss */
   #header #catchprase-container-inner .subphrase {
     font-size: 14px;
     line-height: 20px;
   }
 
-  /* line 127, ../../../esti/sass/_header.scss */
+  /* line 124, ../../../esti/sass/_header.scss */
   #header-bottom {
     border: none;
     background: white;
   }
 
-  /* line 131, ../../../esti/sass/_header.scss */
+  /* line 128, ../../../esti/sass/_header.scss */
   #cover-image-container {
     text-align: center;
     margin-bottom: 20px;
   }
 
-  /* line 135, ../../../esti/sass/_header.scss */
+  /* line 132, ../../../esti/sass/_header.scss */
   #cover-image {
     position: relative;
     max-width: 300px;
@@ -8081,7 +8142,7 @@ h1, h2, h3, h4, h5, h6,
     height: auto;
   }
 
-  /* line 142, ../../../esti/sass/_header.scss */
+  /* line 139, ../../../esti/sass/_header.scss */
   #social {
     margin: 0 -20px;
     padding-left: 20px;
@@ -8111,9 +8172,10 @@ section, .section, .section-inverse {
   font-weight: bold;
   line-height: 1.1;
   letter-spacing: -1px;
+  color: #428bca;
 }
 
-/* line 22, ../../../esti/sass/_section.scss */
+/* line 23, ../../../esti/sass/_section.scss */
 .section-inverse {
   background: #428bca;
   color: #FFF;
@@ -8121,20 +8183,20 @@ section, .section, .section-inverse {
   -moz-box-shadow: 0 0 30px 2px rgba(0, 0, 0, 0.125) inset;
   box-shadow: 0 0 30px 2px rgba(0, 0, 0, 0.125) inset;
 }
-/* line 28, ../../../esti/sass/_section.scss */
+/* line 29, ../../../esti/sass/_section.scss */
 .section-inverse a {
   color: inherit;
 }
-/* line 31, ../../../esti/sass/_section.scss */
+/* line 32, ../../../esti/sass/_section.scss */
 .section-inverse .section-title {
   color: inherit;
   color: #333333;
 }
-/* line 35, ../../../esti/sass/_section.scss */
+/* line 36, ../../../esti/sass/_section.scss */
 .section-inverse .section-lead {
   color: inherit;
 }
-/* line 38, ../../../esti/sass/_section.scss */
+/* line 39, ../../../esti/sass/_section.scss */
 .section-inverse .btn-default {
   color: white;
   background-color: #428bca;
@@ -8162,11 +8224,19 @@ section, .section, .section-inverse {
 }
 
 @media (max-width: 767px) {
-  /* line 44, ../../../esti/sass/_section.scss */
+  /* line 45, ../../../esti/sass/_section.scss */
   .section-lead {
     font-size: 36px;
   }
 }
+/* line 1, ../../../esti/sass/_section_description.scss */
+.description-body {
+  max-width: 42em;
+  margin: auto;
+  padding-bottom: 30px;
+  text-shadow: -2px -2px 3px rgba(0, 0, 0, 0.2);
+}
+
 /* line 1, ../../../esti/sass/_section_characters.scss */
 .character-container {
   margin-bottom: 20px;
@@ -8179,4 +8249,103 @@ section, .section, .section-inverse {
   border-top: 1px solid #428bca;
   padding: 9px 1em 0;
   text-align: justify;
+}
+
+/* line 1, ../../../esti/sass/_section_reviews.scss */
+.review-container {
+  margin: 20px;
+  max-width: 36em;
+}
+/* line 4, ../../../esti/sass/_section_reviews.scss */
+.review-container .review-title {
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: #428bca;
+}
+
+/* line 12, ../../../esti/sass/_section_reviews.scss */
+.reviewer-img-placeholder:before {
+  width: 64px;
+  height: 64px;
+  content: "\f007";
+  font-family: FontAwesome;
+  text-align: center;
+  color: inherit;
+  font-size: 48px;
+  vertical-align: middle;
+}
+
+/* line 24, ../../../esti/sass/_section_reviews.scss */
+.reviewer-desc {
+  font-size: 13px;
+}
+
+/* line 1, ../../../esti/sass/_section_biographies.scss */
+.role {
+  background-color: #428bca;
+  display: inline-block;
+  margin-bottom: 4px;
+  padding: .3em .6em;
+  font-size: 12px;
+  font-weight: normal;
+}
+/* line 8, ../../../../.rbenv/versions/2.1.1/lib/ruby/gems/2.1.0/gems/bootstrap-sass-3.1.1.1/vendor/assets/stylesheets/bootstrap/mixins/_labels.scss */
+.role[href]:hover, .role[href]:focus {
+  background-color: #3071a9;
+}
+
+/* line 11, ../../../esti/sass/_section_biographies.scss */
+.author-image {
+  width: 100px;
+}
+
+/* line 14, ../../../esti/sass/_section_biographies.scss */
+.author-description {
+  padding-bottom: 20px;
+}
+
+/* line 19, ../../../esti/sass/_section_biographies.scss */
+#bio .media-heading {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 1.1;
+  padding-bottom: 2px;
+  border-bottom: 1px solid #ddd;
+}
+/* line 26, ../../../esti/sass/_section_biographies.scss */
+#bio .media-heading small,
+#bio .media-heading .small {
+  display: inline-block;
+  font-weight: normal;
+  line-height: 1;
+  color: #999999;
+  font-size: 75%;
+}
+/* line 34, ../../../esti/sass/_section_biographies.scss */
+#bio .list-inline > li {
+  padding-right: 0px;
+  padding-left: 3px;
+}
+/* line 38, ../../../esti/sass/_section_biographies.scss */
+#bio a .fa-stack {
+  color: #c8c8c8;
+}
+/* line 42, ../../../esti/sass/_section_biographies.scss */
+#bio a .fa-stack:hover, #bio a .fa-stack:focus {
+  color: #428bca;
+}
+
+/* line 1, ../../../esti/sass/_footer.scss */
+#footer {
+  position: relative;
+  top: 20px;
+  width: 100%;
+  background-color: #ECF0F1;
+  font-size: 12px;
+  color: #999999;
+}
+/* line 8, ../../../esti/sass/_footer.scss */
+#footer .dd-container {
+  padding-top: 30px;
+  padding-bottom: 30px;
 }

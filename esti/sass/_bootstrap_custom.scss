@@ -13,6 +13,10 @@ h1, h2, h3, h4, h5, h6,
   border-width: 2px;
 }
 
+.btn-container {
+  margin-top: $line-height-computed;
+}
+
 .label {
   padding-bottom: .2em;
 }
@@ -23,8 +27,63 @@ h1, h2, h3, h4, h5, h6,
   display: inline-block;
 }
 
+.dd-container {
+  max-width: 760px;
+  padding-top: $line-height-computed;
+  padding-bottom: $line-height-computed;
+}
+
 // etc
 #fb-like-btn {
   position: relative;
   top: -5px;
+}
+
+hr.context-break {
+  color: $brand-primary;
+  max-width: 540px;
+  margin-left: auto;
+  margin-right: auto;
+  height: 1px;
+  background: #bbb;
+  background-image: -webkit-linear-gradient(left, lighten($brand-primary, 60%), $brand-primary, lighten($brand-primary, 60%));
+  background-image: -moz-linear-gradient(left, lighten($brand-primary, 60%), $brand-primary, lighten($brand-primary, 60%));
+  background-image: -ms-linear-gradient(left, lighten($brand-primary, 60%), $brand-primary, lighten($brand-primary, 60%));
+  background-image: -o-linear-gradient(left, lighten($brand-primary, 60%), $brand-primary, lighten($brand-primary, 60%));
+  text-align: center;
+  &:after {
+    content: '\000a7';
+    display: inline-block;
+    position: relative;
+    top: -14px;
+    padding: 0 10px;
+    background: $body-bg;
+    font-size: 18px;
+    font-family: serif;
+  }
+}
+
+.bubble {
+    position: relative;
+    margin: auto;
+    margin-bottom: 35px;
+    text-align: center;
+    max-width: 36em;
+    padding: 1em 3em;
+    background: $brand-primary;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    color: #FFF;
+}
+
+.bubble:after {
+  content: '';
+  position: absolute;
+  border-top: 15px solid #ccc;
+  border-right: 10px solid transparent;
+  border-left: 10px solid transparent;
+  bottom: -14px;
+  left: 15px;
+  border-color: $brand-primary transparent;
 }
