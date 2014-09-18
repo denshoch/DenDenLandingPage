@@ -16,6 +16,8 @@
       <meta name="select:Layout" content="viollet" title="viollet">
       <meta name="select:Layout" content="gray" title="gray">
 
+      <meta name="color:Primary" content="#428bca">
+
       <meta name="image:CoverImage" content="">
       <meta name="text:BookTitle" content="タイトル">
       <meta name="text:BookSubtitle" content="サブタイトル">
@@ -264,7 +266,8 @@
     <link rel="shortcut icon" href="{Favicon}">
     <link rel="apple-touch-icon-precomposed" href="{PortraitURL-128}">
     <link rel="alternate" type="application/rss+xml" href="{RSS}">
-    <link rel="stylesheet" media="screen" href="/css/esti/1.0/styles.css">
+    <!-- <link rel="stylesheet" media="screen" href="/css/esti/1.0/styles.css"> -->
+    <link rel="stylesheet" media="screen" href="http://lp.denshochan.com/css/esti/1.0/styles.css">
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
@@ -403,7 +406,7 @@
       {block:IfShowSectionDescription}
       <section id="description" class="section-inverse">
         <div class="container dd-container">
-          <h2 class="section-lead section-title">{text:SectionDescription Heading}</h2>
+          <h2 class="section-title text-center">{text:SectionDescription Heading}</h2>
           {block:IfSectionDescriptionLead}
             <p class="section-lead text-center">{text:SectionDescription Lead}</p>
           {/block:IfSectionDescriptionLead}
@@ -424,42 +427,42 @@
           {/block:IfSectionCharactersLead}
           <div class="row">
             {block:IfCharacterName01}
-            <section class="character-container {select:ColumnCount Characters} container center-block text-center">
+            <div class="character-container {select:ColumnCount Characters} container center-block text-center">
               {block:IfCharacterImage01Image}<img class="img-thumbnail" style="width:128px" src="{image:CharacterImage 01}" alt="">{/block:IfCharacterImage01Image}
 
               <div class="h5 character-name">{text:CharacterName 01}</div>
               <div class="character-desc">
                 {text:CharacterDesc 01}
               </div>
-            </section>
+            </div>
             {/block:IfCharacterName01}
             {block:IfCharacterName02}
-            <section class="character-container {select:ColumnCount Characters} container center-block text-center">
+            <div class="character-container {select:ColumnCount Characters} container center-block text-center">
               {block:IfCharacterImage02Image}<img class="img-thumbnail" style="width:128px" src="{image:CharacterImage 02}" alt="">{/block:IfCharacterImage02Image}
               <div class="h5 character-name">{text:CharacterName 02}</div>
               <div class="character-desc">
                 {text:CharacterDesc 02}
               </div>
-            </section>
+            </div>
             {/block:IfCharacterName02}
             {block:IfCharacterName03}
             <div class="separator-for-{select:ColumnCount Characters}"></div>
-            <section class="character-container {select:ColumnCount Characters} container center-block text-center">
+            <div class="character-container {select:ColumnCount Characters} container center-block text-center">
               {block:IfCharacterImage03Image}<img class="img-thumbnail" style="width:128px" src="{image:CharacterImage 03}" alt="">{/block:IfCharacterImage03Image}
               <div class="h5 character-name">{text:CharacterName 03}</div>
               <div class="character-desc">
                 {text:CharacterDesc 03}
               </div>
-            </section>
+            </div>
             {/block:IfCharacterName03}
             {block:IfCharacterName04}
-            <section class="character-container {select:ColumnCount Characters} container center-block text-center">
+            <div class="character-container {select:ColumnCount Characters} container center-block text-center">
               {block:IfCharacterImage04Image}<img class="img-thumbnail" style="width:128px" src="{image:CharacterImage 04}" alt="">{block:IfCharacterImage04Image}
               <div class="h5 character-name">{text:CharacterName 04}</div>
               <div class="character-desc">
                 {text:CharacterDesc 04}
               </div>
-            </section>
+            </div>
             {/block:IfCharacterName04}
           </div>
         </div>
@@ -470,7 +473,7 @@
       <!-- セクション：試し読み -->
       {block:IfShowSectionPreview}
         {block:IfShowSectionCharacters}
-        <hr>
+        <hr class="context-break">
         {/block:IfShowSectionCharacters}
 
       <section id="preview">
@@ -488,8 +491,8 @@
           {/block:IfPreviewEmbedCode}
 
           {block:IfPreviewLink}
-            <div class="preview-container center-block text-center">
-              <a class="btn btn-default btn-lg" href="{text:IfPreviewLink}">試し読みを開く</a>
+            <div class="btn-container">
+              <p class="text-center"><a class="btn btn-success btn-lg" href="{text:IfPreviewLink}">試し読みを開く</a></p>
             </div>
           {/block:IfPreviewLink}
 
@@ -931,7 +934,7 @@
         </div>
       </section>
 
-      <hr>
+      <hr class="context-break">
       {/block:IfShowSectionRelatedWorks}
 
       <!-- セクション：著者紹介 -->

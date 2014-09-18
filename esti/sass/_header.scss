@@ -127,6 +127,10 @@ $cover-image-height: 500px;
       }
     }
   }
+  hr {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
   #header-bottom {
     border: none;
     background: $body-bg;
@@ -137,8 +141,8 @@ $cover-image-height: 500px;
   }
   #cover-image {
     position: relative;
-    max-width: 300px;
-    margin-top: -60px;
+    max-width: 260px;
+    margin-top: -40px;
     margin-bottom: 20px;
     height: auto;
   }

@@ -8115,7 +8115,7 @@ hr.context-break:after {
 /* line 45, ../../../esti/sass/_header.scss */
 #header #catchprase-container-inner .catchprase {
   font-size: 48px;
-  line-height: 1.1;
+  line-height: 1.2;
   font-weight: bold;
 }
 /* line 50, ../../../esti/sass/_header.scss */
@@ -8127,7 +8127,7 @@ hr.context-break:after {
 #header #catchprase-container-inner .book-title {
   font-size: 20px;
   font-weight: bold;
-  line-height: 1.1;
+  line-height: 1.2;
   margin: 0;
 }
 /* line 60, ../../../esti/sass/_header.scss */
@@ -8211,27 +8211,33 @@ hr.context-break:after {
   }
 
   /* line 130, ../../../esti/sass/_header.scss */
+  hr {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  /* line 134, ../../../esti/sass/_header.scss */
   #header-bottom {
     border: none;
     background: white;
   }
 
-  /* line 134, ../../../esti/sass/_header.scss */
+  /* line 138, ../../../esti/sass/_header.scss */
   #cover-image-container {
     text-align: center;
     margin-bottom: 20px;
   }
 
-  /* line 138, ../../../esti/sass/_header.scss */
+  /* line 142, ../../../esti/sass/_header.scss */
   #cover-image {
     position: relative;
-    max-width: 300px;
-    margin-top: -60px;
+    max-width: 260px;
+    margin-top: -40px;
     margin-bottom: 20px;
     height: auto;
   }
 
-  /* line 145, ../../../esti/sass/_header.scss */
+  /* line 149, ../../../esti/sass/_header.scss */
   #social {
     margin: 0 -20px;
     padding-left: 20px;
@@ -8340,7 +8346,7 @@ section, .section, .section-inverse {
 @media (max-width: 767px) {
   /* line 48, ../../../esti/sass/_section.scss */
   .section-lead {
-    font-size: 36px;
+    font-size: 32px;
   }
 }
 /* line 1, ../../../esti/sass/_section_description.scss */
@@ -8549,7 +8555,7 @@ section, .section, .section-inverse {
 
 /* line 14, ../../../esti/sass/_section_biographies.scss */
 .author-description {
-  padding-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 /* line 19, ../../../esti/sass/_section_biographies.scss */
