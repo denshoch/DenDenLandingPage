@@ -57,6 +57,12 @@ $cover-image-height: 500px;
       line-height: 1.1;
       margin: 0;
     }
+    .book-subtitle {
+      color: rgba(255,255,255,0.9);
+    }
+    .creators-list {
+      font-style: italic;
+    }
     .btn-default {
       color: #FFF;
       border-color: #FFF;
@@ -132,7 +138,7 @@ $cover-image-height: 500px;
   #cover-image {
     position: relative;
     max-width: 300px;
-    margin-top: -80px;
+    margin-top: -60px;
     margin-bottom: 20px;
     height: auto;
   }

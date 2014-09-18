@@ -31,13 +31,16 @@ section, .section, .section-inverse {
   }
   .section-title {
     color: inherit;
-    color: $gray-dark;
+    //color: $gray-dark;
   }
   .section-lead {
     color: inherit;
   }
   .btn-default {
     @include button-variant(#fff, $brand-primary, #fff);
+  }
+  .btn-primary {
+    @include button-variant(#fff, darken($gray,10%), #fff);
   }
 }
 

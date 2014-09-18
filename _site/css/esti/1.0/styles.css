@@ -1514,7 +1514,7 @@ hr {
 
 /* line 10, ../../../../.rbenv/versions/2.1.1/lib/ruby/gems/2.1.0/gems/bootstrap-sass-3.1.1.1/vendor/assets/stylesheets/bootstrap/_type.scss */
 h1, h2, h3, h4, h5, h6,
-.h1, .h2, .h3, .h4, .section-title, .h5, .h6 {
+.h1, .h2, .h3, .review-container .review-title, .h4, .section-title, .h5, .h6 {
   font-family: inherit;
   font-weight: 500;
   line-height: 1.1;
@@ -1522,20 +1522,49 @@ h1, h2, h3, h4, h5, h6,
 }
 /* line 17, ../../../../.rbenv/versions/2.1.1/lib/ruby/gems/2.1.0/gems/bootstrap-sass-3.1.1.1/vendor/assets/stylesheets/bootstrap/_type.scss */
 h1 small,
-h1 .small, h2 small,
-h2 .small, h3 small,
-h3 .small, h4 small,
-h4 .small, h5 small,
-h5 .small, h6 small,
+h1 .small,
+h1 .review-container .reviewer-name .reviewer-role,
+.review-container .reviewer-name h1 .reviewer-role, h2 small,
+h2 .small,
+h2 .review-container .reviewer-name .reviewer-role,
+.review-container .reviewer-name h2 .reviewer-role, h3 small,
+h3 .small,
+h3 .review-container .reviewer-name .reviewer-role,
+.review-container .reviewer-name h3 .reviewer-role, h4 small,
+h4 .small,
+h4 .review-container .reviewer-name .reviewer-role,
+.review-container .reviewer-name h4 .reviewer-role, h5 small,
+h5 .small,
+h5 .review-container .reviewer-name .reviewer-role,
+.review-container .reviewer-name h5 .reviewer-role, h6 small,
 h6 .small,
+h6 .review-container .reviewer-name .reviewer-role,
+.review-container .reviewer-name h6 .reviewer-role,
 .h1 small,
-.h1 .small, .h2 small,
-.h2 .small, .h3 small,
-.h3 .small, .h4 small, .section-title small,
+.h1 .small,
+.h1 .review-container .reviewer-name .reviewer-role,
+.review-container .reviewer-name .h1 .reviewer-role, .h2 small,
+.h2 .small,
+.h2 .review-container .reviewer-name .reviewer-role,
+.review-container .reviewer-name .h2 .reviewer-role, .h3 small, .review-container .review-title small,
+.h3 .small,
+.review-container .review-title .small,
+.h3 .review-container .reviewer-name .reviewer-role,
+.review-container .reviewer-name .h3 .reviewer-role,
+.review-container .review-title .reviewer-name .reviewer-role,
+.review-container .reviewer-name .review-title .reviewer-role, .h4 small, .section-title small,
 .h4 .small,
-.section-title .small, .h5 small,
-.h5 .small, .h6 small,
-.h6 .small {
+.section-title .small,
+.h4 .review-container .reviewer-name .reviewer-role,
+.review-container .reviewer-name .h4 .reviewer-role,
+.section-title .review-container .reviewer-name .reviewer-role,
+.review-container .reviewer-name .section-title .reviewer-role, .h5 small,
+.h5 .small,
+.h5 .review-container .reviewer-name .reviewer-role,
+.review-container .reviewer-name .h5 .reviewer-role, .h6 small,
+.h6 .small,
+.h6 .review-container .reviewer-name .reviewer-role,
+.review-container .reviewer-name .h6 .reviewer-role {
   font-weight: normal;
   line-height: 1;
   color: #999999;
@@ -1544,20 +1573,35 @@ h6 .small,
 /* line 26, ../../../../.rbenv/versions/2.1.1/lib/ruby/gems/2.1.0/gems/bootstrap-sass-3.1.1.1/vendor/assets/stylesheets/bootstrap/_type.scss */
 h1, .h1,
 h2, .h2,
-h3, .h3 {
+h3, .h3, .review-container .review-title {
   margin-top: 20px;
   margin-bottom: 10px;
 }
 /* line 31, ../../../../.rbenv/versions/2.1.1/lib/ruby/gems/2.1.0/gems/bootstrap-sass-3.1.1.1/vendor/assets/stylesheets/bootstrap/_type.scss */
 h1 small,
-h1 .small, .h1 small,
+h1 .small,
+h1 .review-container .reviewer-name .reviewer-role,
+.review-container .reviewer-name h1 .reviewer-role, .h1 small,
 .h1 .small,
+.h1 .review-container .reviewer-name .reviewer-role,
+.review-container .reviewer-name .h1 .reviewer-role,
 h2 small,
-h2 .small, .h2 small,
+h2 .small,
+h2 .review-container .reviewer-name .reviewer-role,
+.review-container .reviewer-name h2 .reviewer-role, .h2 small,
 .h2 .small,
+.h2 .review-container .reviewer-name .reviewer-role,
+.review-container .reviewer-name .h2 .reviewer-role,
 h3 small,
-h3 .small, .h3 small,
-.h3 .small {
+h3 .small,
+h3 .review-container .reviewer-name .reviewer-role,
+.review-container .reviewer-name h3 .reviewer-role, .h3 small, .review-container .review-title small,
+.h3 .small,
+.review-container .review-title .small,
+.h3 .review-container .reviewer-name .reviewer-role,
+.review-container .reviewer-name .h3 .reviewer-role,
+.review-container .review-title .reviewer-name .reviewer-role,
+.review-container .reviewer-name .review-title .reviewer-role {
   font-size: 65%;
 }
 
@@ -1570,15 +1614,29 @@ h6, .h6 {
 }
 /* line 42, ../../../../.rbenv/versions/2.1.1/lib/ruby/gems/2.1.0/gems/bootstrap-sass-3.1.1.1/vendor/assets/stylesheets/bootstrap/_type.scss */
 h4 small,
-h4 .small, .h4 small, .section-title small,
+h4 .small,
+h4 .review-container .reviewer-name .reviewer-role,
+.review-container .reviewer-name h4 .reviewer-role, .h4 small, .section-title small,
 .h4 .small,
 .section-title .small,
+.h4 .review-container .reviewer-name .reviewer-role,
+.review-container .reviewer-name .h4 .reviewer-role,
+.section-title .review-container .reviewer-name .reviewer-role,
+.review-container .reviewer-name .section-title .reviewer-role,
 h5 small,
-h5 .small, .h5 small,
+h5 .small,
+h5 .review-container .reviewer-name .reviewer-role,
+.review-container .reviewer-name h5 .reviewer-role, .h5 small,
 .h5 .small,
+.h5 .review-container .reviewer-name .reviewer-role,
+.review-container .reviewer-name .h5 .reviewer-role,
 h6 small,
-h6 .small, .h6 small,
-.h6 .small {
+h6 .small,
+h6 .review-container .reviewer-name .reviewer-role,
+.review-container .reviewer-name h6 .reviewer-role, .h6 small,
+.h6 .small,
+.h6 .review-container .reviewer-name .reviewer-role,
+.review-container .reviewer-name .h6 .reviewer-role {
   font-size: 75%;
 }
 
@@ -1593,7 +1651,7 @@ h2, .h2 {
 }
 
 /* line 49, ../../../../.rbenv/versions/2.1.1/lib/ruby/gems/2.1.0/gems/bootstrap-sass-3.1.1.1/vendor/assets/stylesheets/bootstrap/_type.scss */
-h3, .h3 {
+h3, .h3, .review-container .review-title {
   font-size: 24px;
 }
 
@@ -1633,7 +1691,8 @@ p {
 
 /* line 79, ../../../../.rbenv/versions/2.1.1/lib/ruby/gems/2.1.0/gems/bootstrap-sass-3.1.1.1/vendor/assets/stylesheets/bootstrap/_type.scss */
 small,
-.small {
+.small,
+.review-container .reviewer-name .reviewer-role {
   font-size: 85%;
 }
 
@@ -1894,7 +1953,9 @@ blockquote ol:last-child {
 /* line 249, ../../../../.rbenv/versions/2.1.1/lib/ruby/gems/2.1.0/gems/bootstrap-sass-3.1.1.1/vendor/assets/stylesheets/bootstrap/_type.scss */
 blockquote footer,
 blockquote small,
-blockquote .small {
+blockquote .small,
+blockquote .review-container .reviewer-name .reviewer-role,
+.review-container .reviewer-name blockquote .reviewer-role {
   display: block;
   font-size: 80%;
   line-height: 1.428571429;
@@ -1903,7 +1964,9 @@ blockquote .small {
 /* line 255, ../../../../.rbenv/versions/2.1.1/lib/ruby/gems/2.1.0/gems/bootstrap-sass-3.1.1.1/vendor/assets/stylesheets/bootstrap/_type.scss */
 blockquote footer:before,
 blockquote small:before,
-blockquote .small:before {
+blockquote .small:before,
+blockquote .review-container .reviewer-name .reviewer-role:before,
+.review-container .reviewer-name blockquote .reviewer-role:before {
   content: '\2014 \00A0';
 }
 
@@ -1920,18 +1983,26 @@ blockquote.pull-right {
 .blockquote-reverse footer:before,
 .blockquote-reverse small:before,
 .blockquote-reverse .small:before,
+.blockquote-reverse .review-container .reviewer-name .reviewer-role:before,
+.review-container .reviewer-name .blockquote-reverse .reviewer-role:before,
 blockquote.pull-right footer:before,
 blockquote.pull-right small:before,
-blockquote.pull-right .small:before {
+blockquote.pull-right .small:before,
+blockquote.pull-right .review-container .reviewer-name .reviewer-role:before,
+.review-container .reviewer-name blockquote.pull-right .reviewer-role:before {
   content: '';
 }
 /* line 277, ../../../../.rbenv/versions/2.1.1/lib/ruby/gems/2.1.0/gems/bootstrap-sass-3.1.1.1/vendor/assets/stylesheets/bootstrap/_type.scss */
 .blockquote-reverse footer:after,
 .blockquote-reverse small:after,
 .blockquote-reverse .small:after,
+.blockquote-reverse .review-container .reviewer-name .reviewer-role:after,
+.review-container .reviewer-name .blockquote-reverse .reviewer-role:after,
 blockquote.pull-right footer:after,
 blockquote.pull-right small:after,
-blockquote.pull-right .small:after {
+blockquote.pull-right .small:after,
+blockquote.pull-right .review-container .reviewer-name .reviewer-role:after,
+.review-container .reviewer-name blockquote.pull-right .reviewer-role:after {
   content: '\00A0 \2014';
 }
 
@@ -7895,7 +7966,7 @@ button.close {
 }
 /* line 8, ../../../esti/sass/_bootstrap_custom.scss */
 h1, h2, h3, h4, h5, h6,
-.h1, .h2, .h3, .h4, .section-title, .h5, .h6 {
+.h1, .h2, .h3, .review-container .review-title, .h4, .section-title, .h5, .h6 {
   font-weight: bold;
 }
 
@@ -7920,19 +7991,24 @@ h1, h2, h3, h4, h5, h6,
 }
 
 /* line 30, ../../../esti/sass/_bootstrap_custom.scss */
+.type-small {
+  font-size: 75%;
+}
+
+/* line 34, ../../../esti/sass/_bootstrap_custom.scss */
 .dd-container {
   max-width: 760px;
   padding-top: 20px;
   padding-bottom: 20px;
 }
 
-/* line 37, ../../../esti/sass/_bootstrap_custom.scss */
+/* line 41, ../../../esti/sass/_bootstrap_custom.scss */
 #fb-like-btn {
   position: relative;
   top: -5px;
 }
 
-/* line 42, ../../../esti/sass/_bootstrap_custom.scss */
+/* line 46, ../../../esti/sass/_bootstrap_custom.scss */
 hr.context-break {
   color: #428bca;
   max-width: 540px;
@@ -7946,7 +8022,7 @@ hr.context-break {
   background-image: -o-linear-gradient(left, white, #428bca, white);
   text-align: center;
 }
-/* line 54, ../../../esti/sass/_bootstrap_custom.scss */
+/* line 58, ../../../esti/sass/_bootstrap_custom.scss */
 hr.context-break:after {
   content: '\000a7';
   display: inline-block;
@@ -7958,7 +8034,7 @@ hr.context-break:after {
   font-family: serif;
 }
 
-/* line 66, ../../../esti/sass/_bootstrap_custom.scss */
+/* line 70, ../../../esti/sass/_bootstrap_custom.scss */
 .bubble {
   position: relative;
   margin: auto;
@@ -7973,7 +8049,7 @@ hr.context-break:after {
   color: #FFF;
 }
 
-/* line 80, ../../../esti/sass/_bootstrap_custom.scss */
+/* line 84, ../../../esti/sass/_bootstrap_custom.scss */
 .bubble:after {
   content: '';
   position: absolute;
@@ -7983,6 +8059,11 @@ hr.context-break:after {
   bottom: -14px;
   left: 15px;
   border-color: #428bca transparent;
+}
+
+/* line 95, ../../../esti/sass/_bootstrap_custom.scss */
+.separator-for-col-sm-6 {
+  clear: both;
 }
 
 /* line 6, ../../../esti/sass/_header.scss */
@@ -8050,24 +8131,32 @@ hr.context-break:after {
   margin: 0;
 }
 /* line 60, ../../../esti/sass/_header.scss */
+#header #catchprase-container-inner .book-subtitle {
+  color: rgba(255, 255, 255, 0.9);
+}
+/* line 63, ../../../esti/sass/_header.scss */
+#header #catchprase-container-inner .creators-list {
+  font-style: italic;
+}
+/* line 66, ../../../esti/sass/_header.scss */
 #header #catchprase-container-inner .btn-default {
   color: #FFF;
   border-color: #FFF;
   background: rgba(0, 0, 0, 0.6);
 }
-/* line 65, ../../../esti/sass/_header.scss */
+/* line 71, ../../../esti/sass/_header.scss */
 #header #catchprase-container-inner .btn-default:hover, #header #catchprase-container-inner .btn-default:active {
   background: rgba(0, 0, 0, 0.3);
 }
 
-/* line 72, ../../../esti/sass/_header.scss */
+/* line 78, ../../../esti/sass/_header.scss */
 #header-bottom {
   border-top: 1px solid #c8c8c8;
   border-bottom: 1px solid #c8c8c8;
   background: #eeeeee;
 }
 
-/* line 78, ../../../esti/sass/_header.scss */
+/* line 84, ../../../esti/sass/_header.scss */
 #cover-image {
   margin-top: -460px;
   max-width: 100%;
@@ -8077,31 +8166,31 @@ hr.context-break:after {
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.25);
 }
 
-/* line 87, ../../../esti/sass/_header.scss */
+/* line 93, ../../../esti/sass/_header.scss */
 #social {
   padding: 20px 0;
 }
-/* line 89, ../../../esti/sass/_header.scss */
+/* line 95, ../../../esti/sass/_header.scss */
 #social .social-bottuns {
   margin-bottom: 0;
 }
 
 @media (max-width: 767px) {
-  /* line 96, ../../../esti/sass/_header.scss */
+  /* line 102, ../../../esti/sass/_header.scss */
   #header:before {
     height: 300px;
   }
-  /* line 99, ../../../esti/sass/_header.scss */
+  /* line 105, ../../../esti/sass/_header.scss */
   #header #header-inner {
     min-height: 300px;
     text-align: center;
   }
-  /* line 103, ../../../esti/sass/_header.scss */
+  /* line 109, ../../../esti/sass/_header.scss */
   #header #catchprase-container {
     position: relative;
     height: auto;
   }
-  /* line 107, ../../../esti/sass/_header.scss */
+  /* line 113, ../../../esti/sass/_header.scss */
   #header #catchprase-container-inner {
     position: relative;
     vertical-align: middle;
@@ -8109,40 +8198,40 @@ hr.context-break:after {
     padding: 20px 0;
     text-align: center;
   }
-  /* line 113, ../../../esti/sass/_header.scss */
+  /* line 119, ../../../esti/sass/_header.scss */
   #header #catchprase-container-inner .catchprase {
     margin-top: 20px;
     font-size: 24px;
     line-height: 1.1;
   }
-  /* line 118, ../../../esti/sass/_header.scss */
+  /* line 124, ../../../esti/sass/_header.scss */
   #header #catchprase-container-inner .subphrase {
     font-size: 14px;
     line-height: 20px;
   }
 
-  /* line 124, ../../../esti/sass/_header.scss */
+  /* line 130, ../../../esti/sass/_header.scss */
   #header-bottom {
     border: none;
     background: white;
   }
 
-  /* line 128, ../../../esti/sass/_header.scss */
+  /* line 134, ../../../esti/sass/_header.scss */
   #cover-image-container {
     text-align: center;
     margin-bottom: 20px;
   }
 
-  /* line 132, ../../../esti/sass/_header.scss */
+  /* line 138, ../../../esti/sass/_header.scss */
   #cover-image {
     position: relative;
     max-width: 300px;
-    margin-top: -80px;
+    margin-top: -60px;
     margin-bottom: 20px;
     height: auto;
   }
 
-  /* line 139, ../../../esti/sass/_header.scss */
+  /* line 145, ../../../esti/sass/_header.scss */
   #social {
     margin: 0 -20px;
     padding-left: 20px;
@@ -8190,7 +8279,6 @@ section, .section, .section-inverse {
 /* line 32, ../../../esti/sass/_section.scss */
 .section-inverse .section-title {
   color: inherit;
-  color: #333333;
 }
 /* line 36, ../../../esti/sass/_section.scss */
 .section-inverse .section-lead {
@@ -8222,9 +8310,35 @@ section, .section, .section-inverse {
   color: #428bca;
   background-color: white;
 }
+/* line 42, ../../../esti/sass/_section.scss */
+.section-inverse .btn-primary {
+  color: white;
+  background-color: #3c3c3c;
+  border-color: white;
+}
+/* line 15, ../../../../.rbenv/versions/2.1.1/lib/ruby/gems/2.1.0/gems/bootstrap-sass-3.1.1.1/vendor/assets/stylesheets/bootstrap/mixins/_buttons.scss */
+.section-inverse .btn-primary:hover, .section-inverse .btn-primary:focus, .section-inverse .btn-primary:active, .section-inverse .btn-primary.active, .open > .section-inverse .btn-primary.dropdown-toggle {
+  color: white;
+  background-color: #222222;
+  border-color: #e0e0e0;
+}
+/* line 22, ../../../../.rbenv/versions/2.1.1/lib/ruby/gems/2.1.0/gems/bootstrap-sass-3.1.1.1/vendor/assets/stylesheets/bootstrap/mixins/_buttons.scss */
+.section-inverse .btn-primary:active, .section-inverse .btn-primary.active, .open > .section-inverse .btn-primary.dropdown-toggle {
+  background-image: none;
+}
+/* line 32, ../../../../.rbenv/versions/2.1.1/lib/ruby/gems/2.1.0/gems/bootstrap-sass-3.1.1.1/vendor/assets/stylesheets/bootstrap/mixins/_buttons.scss */
+.section-inverse .btn-primary.disabled, .section-inverse .btn-primary.disabled:hover, .section-inverse .btn-primary.disabled:focus, .section-inverse .btn-primary.disabled:active, .section-inverse .btn-primary.disabled.active, .section-inverse .btn-primary[disabled], .section-inverse .btn-primary[disabled]:hover, .section-inverse .btn-primary[disabled]:focus, .section-inverse .btn-primary[disabled]:active, .section-inverse .btn-primary[disabled].active, fieldset[disabled] .section-inverse .btn-primary, fieldset[disabled] .section-inverse .btn-primary:hover, fieldset[disabled] .section-inverse .btn-primary:focus, fieldset[disabled] .section-inverse .btn-primary:active, fieldset[disabled] .section-inverse .btn-primary.active {
+  background-color: #3c3c3c;
+  border-color: white;
+}
+/* line 38, ../../../../.rbenv/versions/2.1.1/lib/ruby/gems/2.1.0/gems/bootstrap-sass-3.1.1.1/vendor/assets/stylesheets/bootstrap/mixins/_buttons.scss */
+.section-inverse .btn-primary .badge {
+  color: #3c3c3c;
+  background-color: white;
+}
 
 @media (max-width: 767px) {
-  /* line 45, ../../../esti/sass/_section.scss */
+  /* line 48, ../../../esti/sass/_section.scss */
   .section-lead {
     font-size: 36px;
   }
@@ -8235,6 +8349,7 @@ section, .section, .section-inverse {
   margin: auto;
   padding-bottom: 30px;
   text-shadow: -2px -2px 3px rgba(0, 0, 0, 0.2);
+  text-align: justify;
 }
 
 /* line 1, ../../../esti/sass/_section_characters.scss */
@@ -8251,9 +8366,36 @@ section, .section, .section-inverse {
   text-align: justify;
 }
 
+/* line 3, ../../../esti/sass/_section_acquisition.scss */
+#acquisition .section-lead {
+  margin-bottom: 20px;
+}
+
+/* line 7, ../../../esti/sass/_section_acquisition.scss */
+.price-bg {
+  display: inline-block;
+  padding: .25em 1em;
+  margin-bottom: 40px;
+  background: white;
+  color: #428bca;
+}
+
+/* line 15, ../../../esti/sass/_section_acquisition.scss */
+.price {
+  display: inline-block;
+  font-size: 2em;
+  font-weight: bold;
+  margin: 0 .25em;
+}
+
+/* line 22, ../../../esti/sass/_section_acquisition.scss */
+.note {
+  margin-bottom: 40px;
+}
+
 /* line 1, ../../../esti/sass/_section_reviews.scss */
 .review-container {
-  margin: 20px;
+  margin: 30px auto;
   max-width: 36em;
 }
 /* line 4, ../../../esti/sass/_section_reviews.scss */
@@ -8261,9 +8403,83 @@ section, .section, .section-inverse {
   margin-top: 0;
   margin-bottom: 10px;
   color: #428bca;
+  text-align: center;
+}
+/* line 11, ../../../esti/sass/_section_reviews.scss */
+.review-container .bubble {
+  margin-bottom: 25px;
+  font-size: 16px;
+}
+/* line 14, ../../../esti/sass/_section_reviews.scss */
+.review-container .bubble blockquote {
+  margin: 0;
+  padding: 0 0 0 10px;
+  border: none;
+  text-align: justify;
+  font-size: inherit;
+}
+/* line 20, ../../../esti/sass/_section_reviews.scss */
+.review-container .bubble blockquote:before {
+  content: "\f10d";
+  font-size: 20px;
+  font-family: FontAwesome;
+  position: absolute;
+  top: 8px;
+  left: 20px;
+  color: inherit;
+}
+/* line 29, ../../../esti/sass/_section_reviews.scss */
+.review-container .bubble blockquote footer {
+  margin-top: .5em;
+  color: inherit;
+}
+/* line 34, ../../../esti/sass/_section_reviews.scss */
+.review-container .bubble a {
+  color: inherit;
+  text-decoration: underline;
+}
+/* line 39, ../../../esti/sass/_section_reviews.scss */
+.review-container .bubble:after {
+  left: 45px;
+}
+/* line 42, ../../../esti/sass/_section_reviews.scss */
+.review-container .reviewer-container {
+  margin-left: 30px;
+}
+/* line 45, ../../../esti/sass/_section_reviews.scss */
+.review-container .reviewer-icon-placeholder {
+  width: 48px;
+  font-size: 40px;
+  text-align: center;
+  line-height: 48px;
+  color: #428bca;
+  vertical-align: bottom;
+}
+/* line 53, ../../../esti/sass/_section_reviews.scss */
+.review-container .reviewer-name {
+  margin-top: 24px;
+  line-height: 1.1;
+  font-size: 16px;
+  font-weight: bold;
+  color: #428bca;
+}
+/* line 59, ../../../esti/sass/_section_reviews.scss */
+.review-container .reviewer-name .reviewer-role {
+  font-size: 75%;
+  font-weight: normal;
+  color: #999999;
+}
+/* line 65, ../../../esti/sass/_section_reviews.scss */
+.review-container .reviewer-name a {
+  color: inherit;
+  text-decoration: underline;
+}
+/* line 69, ../../../esti/sass/_section_reviews.scss */
+.review-container .reviewer-name a:hover, .review-container .reviewer-name a:active {
+  color: #428bca;
 }
 
-/* line 12, ../../../esti/sass/_section_reviews.scss */
+/* line 77, ../../../esti/sass/_section_reviews.scss */
 .reviewer-img-placeholder:before {
   width: 64px;
   height: 64px;
@@ -8275,9 +8491,41 @@ section, .section, .section-inverse {
   vertical-align: middle;
 }
 
-/* line 24, ../../../esti/sass/_section_reviews.scss */
+/* line 89, ../../../esti/sass/_section_reviews.scss */
 .reviewer-desc {
   font-size: 13px;
+}
+
+/* line 1, ../../../esti/sass/_section_related_works.scss */
+.thumbnail {
+  margin-bottom: 10px;
+}
+/* line 3, ../../../esti/sass/_section_related_works.scss */
+.thumbnail .caption {
+  padding-bottom: 0;
+}
+
+/* line 8, ../../../esti/sass/_section_related_works.scss */
+.thumbnail-container {
+  display: inline-block;
+  width: 100%;
+  max-width: 200px;
+  height: 300px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* line 18, ../../../esti/sass/_section_related_works.scss */
+.thumbnail-title {
+  display: inline-block;
+  margin: 0;
+  text-align: center;
+  white-space: nowrap;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-weight: bold;
 }
 
 /* line 1, ../../../esti/sass/_section_biographies.scss */
@@ -8314,7 +8562,9 @@ section, .section, .section-inverse {
 }
 /* line 26, ../../../esti/sass/_section_biographies.scss */
 #bio .media-heading small,
-#bio .media-heading .small {
+#bio .media-heading .small,
+#bio .media-heading .review-container .reviewer-name .reviewer-role,
+.review-container .reviewer-name #bio .media-heading .reviewer-role {
   display: inline-block;
   font-weight: normal;
   line-height: 1;
