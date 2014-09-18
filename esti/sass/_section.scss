@@ -45,6 +45,10 @@ section, .section, .section-inverse {
 }
 
 @media (max-width: $screen-xs-max){
+  section, .section, .section-inverse {
+    padding-top: $line-height-computed;
+    padding-bottom: $line-height-computed;
+  }
   .section-lead {
     font-size: 32px;
   }

@@ -358,17 +358,19 @@
         <div class="container">
           <div id="cover-image-container" class="col-sm-push-7 col-sm-5">
             <img id="cover-image" class="img-thumbnail" src="{image:CoverImage}" alt="">
-            <p class="visible-xs">
+            <div class="visible-xs">
+              <ul class="list-inline">
               {block:IfPreviewEmbedCode}
-                <a class="btn btn-success btn-lg" href="#preview">試し読みする</a>
+                <li><p><a class="btn btn-success btn-lg" href="#preview">試し読みする</a></p></li>
               {/block:IfPreviewEmbedCode}
               {block:IfNotPreviewEmbedCode}
                 {block:IfPreviewLink}
-                  <a class="btn btn-success btn-lg" href="#preview">試し読みする</a>
+                  <li><p><a class="btn btn-success btn-lg" href="#preview">試し読みする</a></p></li>
                 {block:IfPreviewLink}
               {/block:IfNotPreviewEmbedCode}
-              <a class="btn btn-primary btn-lg" href="#acquisition">この本を入手</a>
-            </p>
+              <li><p><a class="btn btn-primary btn-lg" href="#acquisition">この本を入手</a></p></li>
+              </ul>
+            </div>
           </div>
           <div id="social" class="col-sm-pull-5 col-sm-7">
             <ul class="list-inline text-center social-bottuns">
