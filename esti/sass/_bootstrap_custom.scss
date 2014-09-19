@@ -33,8 +33,8 @@ h1, h2, h3, h4, h5, h6,
 
 .dd-container {
   max-width: 760px;
-  padding-top: $line-height-computed;
-  padding-bottom: $line-height-computed;
+  margin-top: $line-height-computed;
+  margin-bottom: $line-height-computed;
 }
 
 // etc
@@ -44,16 +44,17 @@ h1, h2, h3, h4, h5, h6,
 }
 
 hr.context-break {
-  color: $brand-primary;
+  $context-break-color: $gray-light;
+  color: $context-break-color;
   max-width: 540px;
   margin-left: auto;
   margin-right: auto;
   height: 1px;
-  background: #bbb;
-  background-image: -webkit-linear-gradient(left, lighten($brand-primary, 60%), $brand-primary, lighten($brand-primary, 60%));
-  background-image: -moz-linear-gradient(left, lighten($brand-primary, 60%), $brand-primary, lighten($brand-primary, 60%));
-  background-image: -ms-linear-gradient(left, lighten($brand-primary, 60%), $brand-primary, lighten($brand-primary, 60%));
-  background-image: -o-linear-gradient(left, lighten($brand-primary, 60%), $brand-primary, lighten($brand-primary, 60%));
+  background: $body-bg;
+  background-image: -webkit-linear-gradient(left, lighten($context-break-color, 60%), $context-break-color, lighten($context-break-color, 60%));
+  background-image: -moz-linear-gradient(left, lighten($context-break-color, 60%), $context-break-color, lighten($context-break-color, 60%));
+  background-image: -ms-linear-gradient(left, lighten($context-break-color, 60%), $context-break-color, lighten($context-break-color, 60%));
+  background-image: -o-linear-gradient(left, lighten($context-break-color, 60%), $context-break-color, lighten($context-break-color, 60%));
   text-align: center;
   &:after {
     content: '\000a7';

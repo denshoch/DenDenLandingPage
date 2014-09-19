@@ -1,5 +1,5 @@
 $header-height-lg: 500px;
-$header-height-xs: 300px;
+$header-height-xs: 160px;
 $header-shadow-opacity: 0.5;
 $cover-image-height: 500px;
 
@@ -51,11 +51,24 @@ $cover-image-height: 500px;
       font-size: 16px;
       line-height: 20px;
     }
+    .book-collection-title {
+      line-height: 1.2;
+      margin-bottom: 5px;
+    }
+    .book-collection-title-label {
+      display: inline-block;
+      padding: .2em .5em;
+      font-size: 80%;
+      font-weight: bold;
+      color: inherit;
+      background-color: transparent;
+      border: 2px solid #FFF;
+    }
     .book-title {
       font-size: 20px;
       font-weight: bold;
       line-height: 1.2;
-      margin: 0;
+      margin-bottom: 5px;
     }
     .book-subtitle {
       color: rgba(255,255,255,0.9);
@@ -68,7 +81,7 @@ $cover-image-height: 500px;
       border-color: #FFF;
       background: rgba(0,0,0,0.6);
       &:hover,
-      &:active {
+      &:focus {
         background: rgba(0,0,0,0.3);
       }
     }
@@ -79,6 +92,33 @@ $cover-image-height: 500px;
   border-top:    1px solid darken($gray-lighter,15%);
   border-bottom: 1px solid darken($gray-lighter,15%);
   background: $gray-lighter;
+  .book-collection-title {
+    line-height: 1.2;
+    margin-bottom: 5px;
+  }
+  .book-collection-title-label {
+    display: inline-block;
+    padding: .2em .5em;
+    font-size: 80%;
+    font-weight: bold;
+    color: $brand-primary;
+    background-color: transparent;
+    border: 2px solid $brand-primary;
+  }
+  .book-title {
+    font-size: 32px;
+    font-weight: bold;
+    line-height: 1.2;
+    margin-bottom: 5px;
+    color: inherit;
+  }
+  .book-subtitle {
+    color: $gray;
+  }
+  .creators-list {
+    color: $gray-light;
+    font-style: italic;
+  }
 }
 
 #cover-image {
@@ -126,10 +166,10 @@ $cover-image-height: 500px;
         line-height: 20px;
       }
     }
-  }
-  hr {
-    margin-top: 10px;
-    margin-bottom: 10px;
+    hr {
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
   }
   #header-bottom {
     border: none;

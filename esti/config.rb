@@ -3,7 +3,8 @@ require 'bootstrap-sass'
 
 # Set this to the root of your project when deployed:
 http_path = "/"
-css_dir = "../css/esti/1.0"
+#css_dir = "../css/esti/1.0"
+css_dir = "../../Dropbox/Public/esti"
 sass_dir = "sass"
 images_dir = "images"
 javascripts_dir = "javascripts"

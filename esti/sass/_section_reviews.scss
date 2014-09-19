@@ -4,7 +4,7 @@
   .review-title {
     @extend .h3;
     margin-top: 0;
-    margin-bottom: 10px;
+    margin-bottom: $line-height-computed;
     color: $brand-primary;
     text-align: center;
   }
@@ -71,21 +71,4 @@
       }
     }
   }
-}
-
-.reviewer-img-placeholder {
-  &:before {
-    width: 64px;
-    height: 64px;
-    content: "\f007";
-    font-family: FontAwesome;
-    text-align: center;
-    color: inherit;
-    font-size: 48px;
-    vertical-align: middle;
-  }
-}
-
-.reviewer-desc {
-  font-size: 13px;
 }

@@ -4,21 +4,13 @@
     <meta charset="utf-8">
     <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1" /><![endif]-->
 
-    <title>{Title}</title>
-
     {block:Hidden}
-      <meta name="select:Layout" content="default" title="default">
-      <meta name="select:Layout" content="red" title="red">
-      <meta name="select:Layout" content="pink" title="pink">
-      <meta name="select:Layout" content="orange" title="orange">
-      <meta name="select:Layout" content="green" title="green">
-      <meta name="select:Layout" content="blue" title="blue">
-      <meta name="select:Layout" content="viollet" title="viollet">
-      <meta name="select:Layout" content="gray" title="gray">
 
-      <meta name="color:Primary" content="#428bca">
-
+      <meta name="color:PrimaryColor" content="#428bca">
       <meta name="image:CoverImage" content="">
+      <meta name="if:HeaderImageEffect Blur" content="0">
+
+      <meta name="text:SiteSubtitle" content="Official Website">
       <meta name="text:BookTitle" content="タイトル">
       <meta name="text:BookSubtitle" content="サブタイトル">
       <meta name="text:BookCollectionTitle" content="シリーズタイトル">
@@ -224,6 +216,8 @@
       <meta name="if:EnableSchemaOrg" content="1">
     {block:Hidden}
 
+    <title>{Title} {text:BookSubtitle} | {text:SiteSubtitle}</title>
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="apple-mobile-web-app-capable" content="yes">
 
@@ -267,17 +261,73 @@
     <link rel="apple-touch-icon-precomposed" href="{PortraitURL-128}">
     <link rel="alternate" type="application/rss+xml" href="{RSS}">
     <!-- <link rel="stylesheet" media="screen" href="/css/esti/1.0/styles.css"> -->
-    <link rel="stylesheet" media="screen" href="http://lp.denshochan.com/css/esti/1.0/styles.css">
+    <!-- <link rel="stylesheet" media="screen" href="http://lp.denshochan.com/css/esti/1.0/styles.css"> -->
+    <link rel="stylesheet" media="screen" href="//dl.dropboxusercontent.com/u/1598159/esti/styles.css">
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 
     <style>
+
+      a {
+        color: {color:PrimaryColor};
+      }
+
+      a:hover,
+      a:focus {
+        color: {color:PrimaryColor};
+      }
+
+      .bubble {
+        background: {color:PrimaryColor};
+      }
+      .bubble:after {
+        border-color: {color:PrimaryColor} transparent;
+      }
+
       #header:before {
+        background-color: {color:PrimaryColor};
         background-image: url({HeaderImage});
+        {block:IfHeaderImageEffectBlur}
         -webkit-filter: blur(3px);
         filter: blur(3px);
+        {/block:IfHeaderImageEffectBlur}
+      }
+
+      .section-lead {
+        color: {color:PrimaryColor};
+      }
+
+      .section-inverse {
+        background: {color:PrimaryColor};
+      }
+
+      .character-desc {
+        border-color: {color:PrimaryColor};
+      }
+
+      .review-container .review-title {
+        color: {color:PrimaryColor};
+      }
+      .review-container .reviewer-icon-placeholder {
+        color: {color:PrimaryColor};
+      }
+      .review-container .reviewer-name {
+        color: {color:PrimaryColor};
+      }
+      .review-container .reviewer-name a:hover,
+      .review-container .reviewer-name a:active {
+        color: {color:PrimaryColor};
+      }
+
+      .role {
+        background-color: {color:PrimaryColor};
+      }
+
+      #bio a .fa-stack:hover,
+      #bio a .fa-stack:focus {
+        color: {color:PrimaryColor};
       }
 
       {CustomCSS}
@@ -311,40 +361,47 @@
                   {text:Catchphrase Sub}
                 </p>
                 <hr>
-                <p class="book-title">
-                  {text:BookTitle}
-                </p>
-                {block:IfBookSubtitle}
-                <p class="book-subtitle">
-                  {text:BookSubtitle}
-                </p>
-                {/block:IfBookSubtitle}
-                <ul class="list-inline creator-list">
-                  {block:IfAuthorName01}
-                    <li>{text:AuthorName 01}</li>
-                  {/block:IfAuthorName01}
-                  {block:IfAuthorName02}
-                    <li>{text:AuthorName 02}</li>
-                  {/block:IfAuthorName02}
-                  {block:IfContributorName01}
-                    <li>{text:ContributorName 01}</li>
-                  {/block:IfContributorName01}
-                  {block:IfContributorName02}
-                    <li>{text:ContributorName 02}</li>
-                  {/block:IfContributorName02}
-                </ul>
-                <div class="btn-container hidden-xs">
-                  <p>
-                    {block:IfPreviewEmbedCode}
-                      <a class="btn btn-default btn-lg" href="#preview">試し読みする</a>
-                    {/block:IfPreviewEmbedCode}
-                    {block:IfNotPreviewEmbedCode}
-                      {block:IfPreviewLink}
-                        <a class="btn btn-default btn-lg" href="#preview">試し読みする</a>
-                      {block:IfPreviewLink}
-                    {/block:IfNotPreviewEmbedCode}
-                    <a class="btn btn-default btn-lg" href="#acquisition">この本を入手</a>
+                <div class="hidden-xs">
+                  {block:IfBookCollectionTitle}
+                  <p class="book-collection-title">
+                    <span class="book-collection-title-label">{text:BookCollectionTitle}</span>
                   </p>
+                  {/block:IfBookCollectionTitle}
+                  <p class="book-title">
+                    {text:BookTitle}
+                  </p>
+                  {block:IfBookSubtitle}
+                  <p class="book-subtitle">
+                    {text:BookSubtitle}
+                  </p>
+                  {/block:IfBookSubtitle}
+                  <ul class="list-inline creator-list">
+                    {block:IfAuthorName01}
+                      <li>{text:AuthorName 01}</li>
+                    {/block:IfAuthorName01}
+                    {block:IfAuthorName02}
+                      <li>{text:AuthorName 02}</li>
+                    {/block:IfAuthorName02}
+                    {block:IfContributorName01}
+                      <li>{text:ContributorName 01}</li>
+                    {/block:IfContributorName01}
+                    {block:IfContributorName02}
+                      <li>{text:ContributorName 02}</li>
+                    {/block:IfContributorName02}
+                  </ul>
+                </div>
+                <div class="btn-container hidden-xs">
+                  <ul class="list-inline">
+                  {block:IfPreviewEmbedCode}
+                    <li><p><a class="btn btn-default btn-lg" href="#preview">試し読みする</a></p></li>
+                  {/block:IfPreviewEmbedCode}
+                  {block:IfNotPreviewEmbedCode}
+                    {block:IfPreviewLink}
+                      <li><p><a class="btn btn-default btn-lg" href="#preview">試し読みする</a></p></li>
+                    {block:IfPreviewLink}
+                  {/block:IfNotPreviewEmbedCode}
+                  <li><p><a class="btn btn-default btn-lg" href="#acquisition">この本を入手</a></p></li>
+                  </ul>
                 </div>
               </div>
             </div>
@@ -359,17 +416,50 @@
           <div id="cover-image-container" class="col-sm-push-7 col-sm-5">
             <img id="cover-image" class="img-thumbnail" src="{image:CoverImage}" alt="">
             <div class="visible-xs">
-              <ul class="list-inline">
-              {block:IfPreviewEmbedCode}
-                <li><p><a class="btn btn-success btn-lg" href="#preview">試し読みする</a></p></li>
-              {/block:IfPreviewEmbedCode}
-              {block:IfNotPreviewEmbedCode}
-                {block:IfPreviewLink}
-                  <li><p><a class="btn btn-success btn-lg" href="#preview">試し読みする</a></p></li>
-                {block:IfPreviewLink}
-              {/block:IfNotPreviewEmbedCode}
-              <li><p><a class="btn btn-primary btn-lg" href="#acquisition">この本を入手</a></p></li>
+              {block:IfBookCollectionTitle}
+              <p class="book-collection-title">
+                <span class="book-collection-title-label">{text:BookCollectionTitle}</span>
+              </p>
+              {/block:IfBookCollectionTitle}
+              <p class="book-title">
+                {text:BookTitle}
+              </p>
+              {block:IfBookSubtitle}
+              <p class="book-subtitle">
+                {text:BookSubtitle}
+              </p>
+              {/block:IfBookSubtitle}
+
+              <hr class="context-break">
+
+              <ul class="list-inline creator-list">
+                {block:IfAuthorName01}
+                  <li>{text:AuthorName 01}</li>
+                {/block:IfAuthorName01}
+                {block:IfAuthorName02}
+                  <li>{text:AuthorName 02}</li>
+                {/block:IfAuthorName02}
+                {block:IfContributorName01}
+                  <li>{text:ContributorName 01}</li>
+                {/block:IfContributorName01}
+                {block:IfContributorName02}
+                  <li>{text:ContributorName 02}</li>
+                {/block:IfContributorName02}
               </ul>
+
+              <div class="btn-container">
+                <ul class="list-inline">
+                {block:IfPreviewEmbedCode}
+                  <li><p><a class="btn btn-success btn-lg" href="#preview">試し読みする</a></p></li>
+                {/block:IfPreviewEmbedCode}
+                {block:IfNotPreviewEmbedCode}
+                  {block:IfPreviewLink}
+                    <li><p><a class="btn btn-success btn-lg" href="#preview">試し読みする</a></p></li>
+                  {block:IfPreviewLink}
+                {/block:IfNotPreviewEmbedCode}
+                <li><p><a class="btn btn-primary btn-lg" href="#acquisition">この本を入手</a></p></li>
+                </ul>
+              </div>
             </div>
           </div>
           <div id="social" class="col-sm-pull-5 col-sm-7">
