@@ -230,10 +230,10 @@
     {/block:IfKeywords}
 
     <!-- OGP -->
-    <meta property="og:title" content="{text:BookTitle} {text:BookSubtitle} - {text:AuthorName 01} {block:IfAuthorName02}…etc.{/block:IfAuthorName02}">
+    <meta property="og:title" content="{Title} {text:BookSubtitle} - {text:AuthorName 01} {block:IfAuthorName02}…etc.{/block:IfAuthorName02}">
     <meta property="og:type" content="website">
     <meta property="og:image" content="{image:CoverImage}">
-    <meta property="og:site_name" content="{Title}">
+    <meta property="og:site_name" content="{Title} {text:BookSubtitle} | {text:SiteSubtitle}">
     {block:Description}
       <meta property="og:description" content="{MetaDescription}">
     {/block:Description}
@@ -263,7 +263,8 @@
     <!-- <link rel="stylesheet" media="screen" href="/css/esti/1.0/styles.css"> -->
     <!-- <link rel="stylesheet" media="screen" href="http://lp.denshochan.com/css/esti/1.0/styles.css"> -->
     <link rel="stylesheet" media="screen" href="//dl.dropboxusercontent.com/u/1598159/esti/styles.css">
-    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
+    <link rel="canonical" href="{BlogURL}">
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
@@ -290,8 +291,8 @@
         background-color: {color:PrimaryColor};
         background-image: url({HeaderImage});
         {block:IfHeaderImageEffectBlur}
-        -webkit-filter: blur(3px);
-        filter: blur(3px);
+        -webkit-filter: blur(2px);
+        filter: blur(2px);
         {/block:IfHeaderImageEffectBlur}
       }
 
@@ -1324,7 +1325,7 @@
           {block:IfKeywords}
           "keywords": "{text:Keywords}",
           {/block:IfKeywords}
-          "name": "{text:BookTitle} {text:BookSubtitle}"
+          "name": "{Title} {text:BookSubtitle}"
         }
         </script>
       {/block:IfEnableSchemaOrg}
