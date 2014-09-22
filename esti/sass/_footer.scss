@@ -6,7 +6,8 @@
   font-size: 12px;
   color: $gray-light;
   .dd-container {
-    padding-top: 30px;
-    padding-bottom: 30px;
+    margin: 0 auto;
+    padding-top: $line-height-computed * 2;
+    padding-bottom: $line-height-computed * 2;
   }
 }

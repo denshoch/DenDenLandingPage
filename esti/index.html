@@ -6,9 +6,11 @@
 
     {block:Hidden}
 
-      <meta name="color:PrimaryColor" content="#428bca">
+      <meta name="color:PrimaryColor" content="#0088aa">
       <meta name="image:CoverImage" content="">
       <meta name="if:HeaderImageEffect Blur" content="0">
+      <meta name="if:HeaderImageEffect Darken" content="0">
+      <meta name="if:HeaderTextEffect Shadow" content="0">
 
       <meta name="text:SiteSubtitle" content="Official Website">
       <meta name="text:BookTitle" content="タイトル">
@@ -288,12 +290,27 @@
       }
 
       #header:before {
-        background-color: {color:PrimaryColor};
         background-image: url({HeaderImage});
         {block:IfHeaderImageEffectBlur}
         -webkit-filter: blur(2px);
         filter: blur(2px);
         {/block:IfHeaderImageEffectBlur}
+      }
+
+      #header #header-inner {
+        {block:IfHeaderImageEffectDarken}
+        background-color: rgba(0,0,0,0.2);
+        {/block:IfHeaderImageEffectDarken}
+      }
+
+      #catchprase-container-inner {
+        {block:IfHeaderTextEffectShadow}
+        text-shadow: 2px 2px 10px rgba(0,0,0,0.4), -2px -2px 10px rgba(0,0,0,0.4), 2px -2px 10px rgba(0,0,0,0.4), -2px 2px 10px rgba(0,0,0,0.4);
+        {/block:IfHeaderTextEffectShadow}
+      }
+
+      #header-bottom .creators-list > li {
+        color: {color:PrimaryColor};
       }
 
       .section-lead {
@@ -376,7 +393,7 @@
                     {text:BookSubtitle}
                   </p>
                   {/block:IfBookSubtitle}
-                  <ul class="list-inline creator-list">
+                  <ul class="list-inline creators-list">
                     {block:IfAuthorName01}
                       <li>{text:AuthorName 01}</li>
                     {/block:IfAuthorName01}
@@ -433,7 +450,7 @@
 
               <hr class="context-break">
 
-              <ul class="list-inline creator-list">
+              <ul class="list-inline creators-list">
                 {block:IfAuthorName01}
                   <li>{text:AuthorName 01}</li>
                 {/block:IfAuthorName01}
@@ -1334,9 +1351,9 @@
     <footer id="footer">
       <div class="container dd-container text-center">
 
-        <p>{block:IfFooterText}{text:FooterText}{/block:IfFooterText}</p>
-
         {block:IfCopyrightHolder}<p>Copyright © {CopyrightYears} {text:CopyrightHolder}</p>{/block:IfCopyrightHolder}
+
+        <p>{block:IfFooterText}{text:FooterText}{/block:IfFooterText}</p>
 
         <div><small>Theme designed by <a href="http://densho.hatenablog.com/">Densho Channel</a>.</small></div>
       </div>
