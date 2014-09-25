@@ -96,3 +96,7 @@ hr.context-break {
 .separator-for-col-sm-6 {
   clear: both;
 }
+
+// BiB/i
+span.bibi-holder { display: inline-block; width: 500px; max-width:100%; height: 500px; }
+span.bibi-holder > iframe { display: inline-block; width: 100%; height: 100%; }
