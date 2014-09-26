@@ -1,4 +1,4 @@
-# Esti (Den-Den Landing Page)
+# Narrative (Den-Den Landing Page)
 
 ## Overview <small>概要</small>
 
